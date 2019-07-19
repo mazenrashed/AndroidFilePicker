@@ -25,8 +25,7 @@ class CompressedFileType : FileType {
             // 如果没有 . 符号，即是没有文件后缀
             return false
         }
-        val suffix = fileName.substring(fileName.lastIndexOf(".")  + 1)
-        return when (suffix){
+        return when (fileName.substring(fileName.lastIndexOf(".")  + 1)){
             "zip", "rar", "arj", "tar.gz", "tgz", "gz", "iso", "tbz", "tbz2", "7z" -> {
                 true
             }
